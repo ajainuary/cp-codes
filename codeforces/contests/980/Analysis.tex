@@ -1,0 +1,84 @@
+\documentclass[11pt]{article}
+%Gummi|065|=)
+\title{\textbf{Contest Analysis - CF Round \#480}}
+\author{Anurag Jain}
+\date{}
+\begin{document}
+
+\maketitle
+
+\section{Brief}
+
+This was a relatively difficult contest.
+
+\begin{tabular}{|cc|}
+\hline
+	Questions Solved &  Rank\\
+	3 & 1000\\
+	2 & 2000\\
+	1 & 3500\\
+\hline
+\end{tabular}
+
+The B Question was tricky and the solution was not obvious.
+An ideal strategy would have been A $\rightarrow$ C $\rightarrow$ B.
+
+\section{980 B - Marlin}
+It was a tricky one, and the solution required a lot of thinking.
+\underline{\textbf{Observations :}}
+    \begin{itemize}
+      \item No. of Paths from the city to pond will be same as No. of Paths from pond to city.
+      \item This means that there exists an axis of symmetry in vertical direction in the middle.
+      \item Along with this, there is also an axis of symmetry in horizontal direction but it is not of much use.
+    \end{itemize}
+  
+Now when 
+k
+ is even, we can do the following: start from (2,2), put a hotel in that cell and another hotel in (2,n-1), then a hotel in (2,3) and one in (2, n-2), and so on until either the second row is full (expect for the middle column) or the number of hotels is 
+k
+, if you still need more hotels then just do the same for the third row.
+
+This works because going from 
+(
+1
+,
+1
+)
+ to 
+(
+4
+,
+n
+)
+ is identical to going from 
+(
+1
+,
+n
+)
+ to 
+(
+4
+,
+1
+)
+ since the constructed grid is symmetric.
+
+Now if 
+k
+=
+2
+∗
+(
+n
+−
+2
+)
+ then just fill the the middle column (second and third row), and if 
+k
+ is odd then just add a hotel in middle column.
+
+\section{980 C - Posterized}
+If you are wondering where your old default text is; it has been stored as a template. The template menu can be used to access and restore it. 
+
+\end{document}
